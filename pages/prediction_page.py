@@ -20,13 +20,13 @@ st.sidebar.markdown("# Prediction page 🎉")
 
 
 html_style = """
-<div style="background-color:navy;padding:8px;border-radius:40px;margin-bottom:24px">
+<div style="background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);padding:8px;border-radius:40px;margin-bottom:24px">
 <h2 style="color:white;text-align:center;font-size:24px">Cars Prediction</h2>
 </div>"""
 st.sidebar.markdown(html_style,unsafe_allow_html=True)
 
 html_style2 = """
-<div style="background-color:navy;padding:8px; border-radius:40px;margin-bottom:24px">
+<div style="background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);padding:8px; border-radius:40px;margin-bottom:24px">
 <h2 style="color:white;text-align:center;font-size:32px">Now, you can predict with ML 🎉</h2>
 </div>"""
 st.markdown(html_style2,unsafe_allow_html=True)
@@ -42,7 +42,7 @@ css = """
         align-items: center;
         justify-content: center;
         margin-bottom: 50px;
-        width: 91%;
+        max-width: 91%;
         margin-left: 30px;
     }
 </style>
