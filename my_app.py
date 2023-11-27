@@ -14,7 +14,7 @@ from sklearn.preprocessing import OrdinalEncoder
 st.sidebar.markdown("# Main page 🎈")
 
 html_style0 = """
-<div style="background-color:navy;padding:5px;margin-bottom:32px;border-radius:50px">
+<div style="background: linear-gradient(to bottom, #000099 0%, #ffffff 100%);padding:5px;margin-bottom:32px;border-radius:50px">
 <h1 style="color:white;text-align:center;">Cars Prediction App</h1>
 </div>"""
 st.markdown(html_style0,unsafe_allow_html=True)
@@ -22,6 +22,7 @@ st.markdown(html_style0,unsafe_allow_html=True)
 # Add image
 # img = Image.open("car.jpg")
 # st.image(img, caption="car")
+
 
 
 import streamlit as st
@@ -37,8 +38,8 @@ css = """
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 50px;
-        width: 91%;
+        margin: 0 50px 30px 50px;
+        max-width: 100%;
     }
 </style>
 """
@@ -77,6 +78,4 @@ st.image(img, caption="car")
 
 st.header('Still Waiting! 🎈')
 st.markdown("Harry Up, and get ready to embark on a journey of car prediction and exploration. Start using the Cars Prediction App today and unlock a world of data-driven predictions to enhance your car-related decisions.")
-
-
 
