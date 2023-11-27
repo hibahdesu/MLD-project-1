@@ -37,12 +37,37 @@ st.header('Null values in the data')
 st.code('df.isnull().sum()')
 st.write(df.isnull().sum())
 
+st.markdown('As we can see, there is no null data.')
+
 st.header('Columns in the data')
 st.code('df.columns')
 st.write(df.columns) 
 
 
 st.title('Graphs')
+
+st.header('make model with price')
+
+# Add image
+img = Image.open("p1.png")
+st.image(img, caption="ML")
+st.info('As we can see, some of the make models have a very low values, and this will not help us. So, I am going to drop them.')
+
+st.markdown('#### First, I am going to make a variable with these values')
+st.code('#Making a variable to see the classes that have less than 100, as it may affect the model\nlow = df.make_model.value_counts()[df.make_model.value_counts() <= 100].index\nlow\n')
+
+st.markdown("#### Now, I am going to drop them with the for loop.")
+st.code("#Dropping the low values of make_model\nfor i in low:\ndrop_index = df[df['make_model'] == i].index\ndf.drop(index = drop_index, inplace=True)\ndf.reset_index(drop=True, inplace=True)")
+
+st.header('price')
+st.code('#Seeing teh boxplot of price\nsns.boxplot(df["price"])\nplt.show()')
+img2 = Image.open("p2.png")
+st.image(img2, caption="ML")
+st.markdown("As we can see, there are some outliers in price, I am going to drop them.")
+
+st.markdown("##### Filtering the price")
+st.code("#Dropping the prices that more than 40000\ndf = df[df['price'] < 40000]\ndf")
+
 
 colors = ['purple']
 
@@ -67,16 +92,3 @@ ax.set_title('Bar Plot')
 
 # Display the plot in Streamlit
 st.pyplot(fig)
-
-c2 = ['orange']
-st.header('make model with price')
-fig, ax = plt.subplots()
-ax.bar(df['make_model'], df['price'], color=c2)
-ax.set_xlabel('make_model')
-ax.set_ylabel('price')
-ax.set_title('Bar Plot')
-
-# Display the plot in Streamlit
-st.pyplot(fig)
-
-

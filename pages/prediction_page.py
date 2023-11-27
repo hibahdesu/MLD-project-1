@@ -20,13 +20,13 @@ st.sidebar.markdown("# Prediction page 🎉")
 
 
 html_style = """
-<div style="background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);padding:8px;border-radius:40px;margin-bottom:24px">
+<div style="background: linear-gradient(to bottom, #000099 0%, #ffffff 100%);padding:8px;border-radius:40px;margin-bottom:24px">
 <h2 style="color:white;text-align:center;font-size:24px">Cars Prediction</h2>
 </div>"""
 st.sidebar.markdown(html_style,unsafe_allow_html=True)
 
 html_style2 = """
-<div style="background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);padding:8px; border-radius:40px;margin-bottom:24px">
+<div style="background: linear-gradient(to bottom, #000099 0%, #ffffff 100%);padding:8px; border-radius:40px;margin-bottom:24px">
 <h2 style="color:white;text-align:center;font-size:32px">Now, you can predict with ML 🎉</h2>
 </div>"""
 st.markdown(html_style2,unsafe_allow_html=True)
@@ -36,14 +36,14 @@ st.markdown(html_style2,unsafe_allow_html=True)
 css = """
 <style>
     .rounded-image {
-        border-radius: 25px 10px ;
+        border-radius: 5px 15px ;
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 50px;
-        max-width: 91%;
-        margin-left: 30px;
+        margin:0 30px 50px 30px;
+        max-width: 100%;
+        
     }
 </style>
 """
